@@ -9,6 +9,12 @@ export default function technology() {
 
 
     return (
-        <div className='w-full h-screen flex justify-center items-center text-white bg-black'
-        style={{backgroundImage : `url(${lapview})`}}>Login</div>
+        <div className='w-full h-screen flex  text-white bg-black'
+        style={{backgroundImage : `url(${lapview})`}}>
+        <div className='flew flex col w-1/2 justify-center items-center h-64'>
+                <div className='flex mt-18 mr-12 text-lg'><h1 className='text-white mx-4'>04</h1>
+                <span className='text-gray-500'>SPACE LAUNCH 101 </span>               </div>
+            </div>
+            </div>
+            
     )};
