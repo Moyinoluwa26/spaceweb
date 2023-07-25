@@ -11,15 +11,13 @@ import Anouseh from './Ubcrew/Anouseh';
 import mobview from '../crew/background-crew-mobile.jpg';*/
 
 export default function crew() {
-    return ( <div className='w-full h-screen flex flex-col text-white bg-black'
+    return ( <div className='w-full h-screen flex flex-col text-white bg-black max-h-screen'
        style={{backgroundImage : `url(${lapview})`}}>
-        <div className='flew flex col w-1/2 justify-center items-center h-64'>
+        <div className='flew flex col w-1/2 justify-center items-center h-48'>
                 <div className='flex mt-18 mr-48 text-lg'><h1 className='text-white mx-4'>02</h1>
                 <span className='text-gray-500'>MEET YOUR CREW</span>
                 </div>
-                {/*<div className='flex w-1/2 h-64  ml-64'>
-                <div></div>
-                </div>*/}
+            
 
             
         </div>
@@ -36,7 +34,7 @@ export default function crew() {
             </Routes>
         </div>
 
-        <div className='absolute bottom-9 left-36 '>
+        <div className='absolute bottom-9 left-32 '>
         <div><CrewNav/></div>
         </div>
         
