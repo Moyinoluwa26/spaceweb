@@ -16,11 +16,11 @@ export default function Destination() {
         style={{ backgroundImage: `url(${lapview})` }}>
             <div className='flex w-full justify-center items-center h-64 '>
                 
-                <div className='flex mt-18 mr-12 text-lg'><h1 className='text-white mx-4'>01</h1>
+                <div className='flex mt-18 mr-12 justify-between text-lg '><h1 className='text-white mx-4'>01</h1>
                 <span className='text-gray-500'>PICK YOUR DESTINATION</span>
                 </div>
-                <div>DESCRIPTION</div>
-                <div className='flex w-1/2 h-64 '>
+                
+                <div className='flex w-1/2 h-64  ml-64'>
                 <div><Navigation/></div>
                 </div>
 
