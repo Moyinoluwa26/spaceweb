@@ -2,6 +2,11 @@ import React from 'react';
 
 import lapview from '../technology/background-technology-desktop.jpg';
 import TechNav from './Ubtechnology/TechNav';
+import { Route,Routes } from 'react-router-dom';
+
+import Launch from './Ubtechnology/Launch';
+import SpaceCap from './Ubtechnology/SpaceCap';
+import Sport from './Ubtechnology/Sport';
 /*import tabview from '../technology/background-technology-tablet.jpg';
 import mobview from '../technology/background-technology-mobile.jpg';*/
 
@@ -12,12 +17,26 @@ export default function technology() {
     return (
         <div className='w-full h-screen flex flex-col  text-white '
         style={{backgroundImage : `url(${lapview})`}}>
-        <div className='flex flex-col w-1/2 justify-center items-center h-36 bg-black'>
+        <div className='flex flex-col w-1/2 justify-center items-center h-36 '>
                 <div className='flex mt-24 mr-20 text-lg'><h1 className='text-white mx-4'>04</h1>
                 <span className='text-gray-500'>SPACE LAUNCH 101 </span>               </div>
         </div>
-        <div>
+        <div className='flex flex-row '>
             <div><TechNav/></div>
+            <div className=''>
+                THE TERMINOLOGY......
+            </div>
+            <div className='flex justify-center items-center'>
+            <Routes>
+             
+             <Route index element={<Launch/>}/>
+             <Route path='/Launch' element={<Launch/>}/>
+             <Route path='/SpaceCap' element={<SpaceCap/>}/>
+             <Route path='/Sport' element={<Sport/>}/>
+            
+
+            </Routes>
+        </div>
         </div>
 
         
