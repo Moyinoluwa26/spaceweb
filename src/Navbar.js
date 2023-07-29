@@ -49,12 +49,12 @@ const ChNav = () => {
             </ul>
 
             <div className=' md:hidden mx-10 my-auto text-white flex-row' onClick={ChNav}>
-                {Nav ? <FaTimes size={30} /> : <FaBars size={30}/>}</div>
+                {!Nav && /*? <FaTimes size={30} /> :*/ <FaBars size={30}/>}</div>
 
-{Nav && <div className='absolute right-0 top-11 '><ul className='  z-10 h-16  text-sm flex-col '>
+{Nav && <div className='fixed right-0 top-10'><ul className='  z-10 h-16  text-sm flex-col '>
                 {Links.map(({id,to,text}) => { 
                     return (
-                        <li key={id} className='bg-gray-500 bg-opacity-25 px-5 flex text-gray-200 h-full w-full '>
+                        <li key={id} className='bg-gray-500 bg-opacity-25 px-5 flex text-gray-200 h-full w-full justify-center'>
                             <NavLink to={to} className={({ isActive }) => isActive ? 'text-white pt-5 flex h-full border-b-2 border-white border-solid ' : 'text-white flex pt-5  h-full '} >
                             
                                  
@@ -64,9 +64,14 @@ const ChNav = () => {
 
                             
                         </li>
+
+                        
                     )
                 })}
-            </ul></div>}
+                   <div className='flex justify-center bg-gray-500 bg-opacity-25' onClick={ChNav}><FaTimes size={30} className='my-4'/></div>         
+            </ul>
+            
+</div>}
             </div>
             
         
