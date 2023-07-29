@@ -51,7 +51,7 @@ const ChNav = () => {
             <div className=' md:hidden mx-10 my-auto text-white flex-row' onClick={ChNav}>
                 {!Nav && /*? <FaTimes size={30} /> :*/ <FaBars size={30}/>}</div>
 
-{Nav && <div className='fixed right-0 top-10'><ul className='  z-10 h-16  text-sm flex-col '>
+{Nav && <div className='md:hidden fixed right-0 top-10'><ul className='  z-10 h-16  text-sm flex-col '>
                 {Links.map(({id,to,text}) => { 
                     return (
                         <li key={id} className='bg-gray-500 bg-opacity-25 px-5 flex text-gray-200 h-full w-full justify-center'>

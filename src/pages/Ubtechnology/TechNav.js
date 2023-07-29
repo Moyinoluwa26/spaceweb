@@ -7,9 +7,9 @@ const Links = [
     {id:3, no : '02', to: '/technology/Sport', text: 3}];
 
  function TechNav () {
-    return (< div  className="flex ">
-    <div className=' flex  justify-cente '>
-    <ul className='flex mt-12 ml-24 w-36 z-10 text-sm  items-center  justify-between md:flex-col flex-row'>
+    return (< div  className="flex justify-center">
+    <div className=' flex  justify-center my-8  '>
+    <ul className='flex md:mt-12 md:ml-24 md:w-36 z-10 text-sm  items-center  justify-between md:flex-col flex-row'>
             {Links.map(({id,to,text}) => { 
                 return (
                     <li key={id} className=' md:my-4 my-8 md:mx-0 mx-4'>
