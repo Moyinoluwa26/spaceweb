@@ -20,7 +20,7 @@ const ChNav = () => {
 }    
 
     return ( 
-        <div className='absolute top-9 w-full bg-black'>
+        <div className='md:absolute fixed top-9 w-full '>
         <div className='Nav flex justify-between w-full  '>
 
             <NavLink to='/' className='mx-10 my-auto text-white '>
@@ -48,13 +48,13 @@ const ChNav = () => {
                 })}
             </ul>
 
-            <div className=' md:hidden mx-10 my-auto text-white flex-col bg-black' onClick={ChNav}>
+            <div className=' md:hidden mx-10 my-auto text-white flex-row' onClick={ChNav}>
                 {Nav ? <FaTimes size={30} /> : <FaBars size={30}/>}</div>
 
-{Nav && <ul className=' bg-gray-500 bg-opacity-25 z-10 h-16  text-sm flex-col'>
+{Nav && <div className='absolute right-0 top-11 '><ul className='  z-10 h-16  text-sm flex-col '>
                 {Links.map(({id,to,text}) => { 
                     return (
-                        <li key={id} className='  px-5 flex text-gray-200 h-full w-full '>
+                        <li key={id} className='bg-gray-500 bg-opacity-25 px-5 flex text-gray-200 h-full w-full '>
                             <NavLink to={to} className={({ isActive }) => isActive ? 'text-white pt-5 flex h-full border-b-2 border-white border-solid ' : 'text-white flex pt-5  h-full '} >
                             
                                  
@@ -66,10 +66,11 @@ const ChNav = () => {
                         </li>
                     )
                 })}
-            </ul>}
+            </ul></div>}
+            </div>
             
         
-             </div>
+             
              
         </div>
     )}
