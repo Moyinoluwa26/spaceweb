@@ -21,9 +21,9 @@ import logo from './logo.svg';
                 <img src={logo} alt='logo.svg' />
             </NavLink>
 
-            <hr width="37%" className='opacity-100 z-50 absolute left-36 top-7' ></hr>
+            <hr width="37%" className='2lg:grid absolute border-1 opacity-100 z-50 left-36 top-7 hidden' ></hr>
 
-            <ul className='flex bg-gray-500 bg-opacity-25 z-10 h-16 text-sm pr-24 pl-16'>
+            <ul className='hidden md:flex bg-gray-500 bg-opacity-25 z-10 h-16 text-sm pr-24 pl-16'>
                 {Links.map(({id,to,no,text}) => { 
                     return (
                         <li key={id} className='  px-5 flex text-gray-200 h-full '>
@@ -41,8 +41,14 @@ import logo from './logo.svg';
                     )
                 })}
             </ul>
+
+            <div className=' md:hidden mx-10 my-auto text-white '>
+                <img src={logo} alt='logo.svg' />
+
+            </div>
+            
         
              </div>
-
+             
         </div>
     )}

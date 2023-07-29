@@ -23,10 +23,9 @@ export default function technology() {
         </div>
         <div className='flex flex-row '>
             <div><TechNav/></div>
-            <div className=''>
-                THE TERMINOLOGY......
-            </div>
-            <div className='flex justify-center items-center'>
+            
+            <div className='flex  flex-row justify-center items-center w-full '>
+                
             <Routes>
              
              <Route index element={<Launch/>}/>

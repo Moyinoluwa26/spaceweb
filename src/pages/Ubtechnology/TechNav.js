@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Links = [  
-    {id: 1, no:'00', to: '/technology/Launch', text: 'Many'},
-    {id:2, no : '01', to: '/technology/SpaceCap', text: 'Two'}, 
-    {id:3, no : '02', to: '/technology/Sport', text: 'Three'}];
+    {id: 1, no:'00', to: '/technology/Launch', text: 1},
+    {id:2, no : '01', to: '/technology/SpaceCap', text: 2}, 
+    {id:3, no : '02', to: '/technology/Sport', text: 3}];
 
  function TechNav () {
     return (< div  className="flex ">
@@ -16,7 +16,7 @@ const Links = [
                         <NavLink to={to} className={({ isActive }) => isActive ? ' h-full border-solid border-white rounded- bg-white rounded-full text-black border-2  flex ' : ' flex rounded-full  border-solid border-white border-2 '} >
                         
                              
-                            <nav className=' w-20 h-20 flex justify-center items-center'>{text}</nav>
+                            <nav className=' w-20 h-20 flex justify-center items-center text-2xl'>{text}</nav>
                             
                 
                         </NavLink>
