@@ -12,10 +12,10 @@ import TitImg from './image-titan.png';
       "travel": "7 years"*/
 
 function Titans() {
-    return (<div><div className=' flex  w-full jutify-center '>
-    <div className='flex w-1/2 justify-center items-center '>
+    return (<div><div className=' flex md:flex-row flex-col w-full jutify-center '>
+    <div className='flex md:w-1/2 justify-center items-center '>
       <img src={TitImg} alt='moon' className='w-64'/></div>
-    <div className='ml-10 flex w-5/12 flex-col justify-center items-center  '>
+    <div className='ml-10 flex mt-12 md:mt-0 md:w-5/12 flex-col justify-center items-center  '>
 
       <div className='flex text-8xl mb-5 '>Titans</div>
       < span className='w-3/4 mb-5 '>

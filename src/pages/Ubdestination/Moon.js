@@ -14,10 +14,10 @@ export default function Moon () {
       },
 */
     return (
-        <div className=' flex  w-full jutify-center '>
-            <div className='flex w-1/2 justify-center items-center '>
+        <div className=' flex md:flex-row w-full jutify-center flex-col '>
+            <div className='flex md:w-1/2 justify-center items-center '>
               <img src={MoonImg} alt='moon' className='w-64'/></div>
-            <div className='ml-10 flex w-5/12 flex-col justify-center items-center  '>
+            <div className='ml-10 flex md:w-5/12 flex-col justify-center items-center mt-12 md:mt-0  '>
 
               <div className='flex text-8xl mb-5 '>Moon</div>
               < span className='w-3/4 mb-5'>

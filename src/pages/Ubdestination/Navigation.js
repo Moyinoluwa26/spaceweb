@@ -9,9 +9,9 @@ function Navigation () {
         {id:3, no : '02', to: '/destination/europa', text: 'EUROPA'},
     {id:4, no: '03', to: '/destination/titans', text:'TITANS'}];
 
-    return ( < div  className="flex mt-40 w-2/5 ml-36">
+    return ( < div  className="flex md:mt-40 md:w-2/5 md:ml-36 mt-12">
         <div className=' flex  justify-center '>
-        <ul className='flex  z-10 text-sm   items-center h-12'>
+        <ul className='flex  z-10 text-sm   items-center h-12 '>
                 {Links.map(({id,to,text}) => { 
                     return (
                         <li key={id} className='  px-5 flex text-gray-200 h-full '>
