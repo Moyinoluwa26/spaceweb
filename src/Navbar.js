@@ -1,6 +1,7 @@
-import React, {} from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from './logo.svg';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 
  export default function Navbar() {
@@ -11,10 +12,15 @@ import logo from './logo.svg';
      {id: 1, no:'00', to: '/home', text: 'HOME'},
      {id:2, no : '01', to: '/destination', text: 'DESCRIPTION'}, 
      {id:3, no : '02', to: '/crew', text: 'CREW'},
-     {id:4, no: '03', to: '/technology', text:'TECHNOLOGY'}]
+     {id:4, no: '03', to: '/technology', text:'TECHNOLOGY'}];
+
+     const [Nav,setNav] = useState(false);
+const ChNav = () => {
+    return setNav(!Nav)
+}    
 
     return ( 
-        <div className='absolute top-9 w-full'>
+        <div className='absolute top-9 w-full bg-black'>
         <div className='Nav flex justify-between w-full  '>
 
             <NavLink to='/' className='mx-10 my-auto text-white '>
@@ -42,10 +48,25 @@ import logo from './logo.svg';
                 })}
             </ul>
 
-            <div className=' md:hidden mx-10 my-auto text-white '>
-                <img src={logo} alt='logo.svg' />
+            <div className=' md:hidden mx-10 my-auto text-white flex-col bg-black' onClick={ChNav}>
+                {Nav ? <FaTimes size={30} /> : <FaBars size={30}/>}</div>
 
-            </div>
+{Nav && <ul className=' bg-gray-500 bg-opacity-25 z-10 h-16  text-sm flex-col'>
+                {Links.map(({id,to,text}) => { 
+                    return (
+                        <li key={id} className='  px-5 flex text-gray-200 h-full w-full '>
+                            <NavLink to={to} className={({ isActive }) => isActive ? 'text-white pt-5 flex h-full border-b-2 border-white border-solid ' : 'text-white flex pt-5  h-full '} >
+                            
+                                 
+                                <nav className='text-gray-500'>{text}</nav>
+                    
+                            </NavLink>
+
+                            
+                        </li>
+                    )
+                })}
+            </ul>}
             
         
              </div>
